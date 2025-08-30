@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Sun3350/EyiTolu-server#readme",
   "description": "",
   "dependencies": {
+    "axios": "^1.11.0",
     "cloudinary": "^1.41.3",
     "compression": "^1.8.1",
     "cors": "^2.8.5",
