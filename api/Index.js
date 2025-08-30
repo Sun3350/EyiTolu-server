@@ -9,6 +9,8 @@ const mongoose = require("mongoose");
 const path = require("path");
 
 const galleryRoutes = require("../routes/galleryRoutes");
+const paymentsRoutes = require("../routes/payments");
+const ordersRoutes = require("../routes/orders");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -37,7 +39,8 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 // Routes
 app.use("/api/gallery", galleryRoutes);
-
+app.use("/api/orders", ordersRoutes);
+app.use("/api/payments", paymentsRoutes);
 // Health check
 app.get("/api/health", (req, res) => {
   res.status(200).json({
